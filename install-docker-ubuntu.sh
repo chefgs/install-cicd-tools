@@ -4,7 +4,10 @@
 sudo apt update -y
 
 # Run the following command to uninstall all conflicting packages
-for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc
+do 
+sudo apt-get remove $pkg
+done
 
 # Install prerequisites
 sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
